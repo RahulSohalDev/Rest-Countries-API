@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body class="Dark-Mode">
+    <header>
+      <nav>
+        <h1>Where in the world ?</h1>
+        <button class="toggal">
+          <img src="./design/dark_mode_FILL0_wght400_GRAD0_opsz48.png" alt="" />
+          <p>Dark Mode</p>
+        </button>
+      </nav>
+    </header>
+
+    <!-- .........search section -->
+    <section class="search">
+      <input
+        class="input"
+        type="text"
+        placeholder="Search for a country......."
+      />
+      <select name="" id="option-bg">
+        <option class="option" value="All">Filter by region</option>
+        <option class="option" value="All">All</option>
+        <option class="option" value="Asia">Asia</option>
+        <option class="option" value="Americas">Americas</option>
+        <option class="option" value="Europe">Europe</option>
+        <option class="option" value="Africa">Africa</option>
+        <option class="option" value="Oceania">Oceania</option>
+      </select>
+    </section>
+
+    <!-- .........Main-Section -->
+    <main>
+      <div class="grid">
+        <h2 class="loading">Countries Loading.....</h2>
+      </div>
+
+      <div class="error-box">No Country Found !!</div>
+    </main>
+
+    <section class="model">
+      <!-- <button class="close">Back</button>
+      <div class="container">
+        <img src="${data.flag}" alt="" />
+        <div class="more-info">
+          <h4 class="regionName">${data.name}</h4>
+          <p><strong>Popolation :</strong> ${data.population}</p>
+          <p><strong>Region :</strong> ${data.region}</p>
+          <p><strong>Capital :</strong> ${data.capital}</p>
+        </div>
+      </div> -->
+    </section>
+
+    <!-- .........JavaScript -->
+    <script src="./index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;600;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bodyColor--: hsl(207, 26%, 17%);
+  --h1--: hsl(0, 0%, 100%);
+  --dark: white;
+  --header-color: hsl(209, 23%, 22%);
+  --box-shadow: 0px -8px 13px;
+  --inputBgColor--: hsl(209, 23%, 22%);
+  --inputTextColor--: hsl(0, 0%, 100%);
+  --liBgColor: hsl(209, 23%, 22%);
+  --backbtnshadow: white;
+  --darkModeImg: hsl(0, 0%, 100%);
+}
+
+.Dark-Mode {
+  --bodyColor--: hsl(0, 0%, 98%);
+  --header-color: hsl(0, 0%, 100%);
+  --h1--: hsl(200, 15%, 8%);
+  --dark: black;
+  --box-shadow: 0px -8px 13px;
+  --inputBgColor--: hsl(0, 0%, 100%);
+  --inputTextColor--: hsl(200, 15%, 8%);
+  --liBgColor: hsl(0, 0%, 100%);
+  --backbtnshadow: black;
+  --darkModeImg: black;
+}
+html {
+  max-width: 1440px;
+  min-width: 375px;
+  margin: auto;
+}
+body {
+  background-color: var(--bodyColor--);
+  font-family: "League Spartan", sans-serif;
+}
+
+h1 {
+  color: var(--h1--);
+}
+
+.toggal {
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--dark);
+  cursor: pointer;
+}
+.toggal img {
+  width: 20px;
+  margin-bottom: 2px;
+  background-color: white;
+  border-radius: 50%;
+  height: 20px;
+  margin-right: 5px;
+}
+
+header {
+  padding: 20px 50px;
+  background-color: var(--header-color);
+  box-shadow: var(--box-shadow);
+  position: sticky;
+  top: 0px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* .........search section........... */
+.search {
+  margin: 40px 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.search input {
+  padding: 10px;
+  background-color: var(--inputBgColor--);
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 0px 2px;
+  color: var(--inputTextColor--);
+}
+.search input:focus {
+  outline: none;
+}
+#option-bg {
+  background-color: var(--inputBgColor--);
+  color: hsl(0, 0%, 52%);
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  padding: 4px 9px;
+  box-shadow: 0px 0px 2px;
+  letter-spacing: 1px;
+}
+.option {
+  margin: 4px 0px;
+}
+.option-bg:focus {
+  outline: none;
+}
+
+/* .............................main-grid............................. */
+.grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  column-gap: 40px;
+  row-gap: 40px;
+  justify-content: space-between;
+  padding: 0px 50px;
+}
+li {
+  list-style: none;
+  height: 330px;
+  background-color: var(--liBgColor);
+  box-shadow: 0px 0px 4px;
+  width: 280px;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+  height: 165px;
+  object-fit: cover;
+}
+
+.detail {
+  padding: 20px;
+}
+
+p {
+  letter-spacing: 0px;
+  font-weight: 500;
+  margin-bottom: 2px;
+  font-size: 16px;
+  color: var(--h1--);
+}
+p > strong {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+h4 {
+  margin-bottom: 13px;
+  font-size: 25px;
+  color: var(--h1--);
+  /* font-weight: 800; */
+  letter-spacing: 1px;
+}
+
+.error-box {
+  padding: 0 50px;
+  width: 100%;
+  height: 170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  display: none;
+}
+
+.error-box.open {
+  display: flex;
+}
+
+.model {
+  display: none;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  justify-content: center;
+  align-items: center;
+  bottom: 0px;
+  right: 0px;
+  background-color: var(--bodyColor--);
+
+  z-index: 100;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+}
+.more-info {
+  margin-left: 20px;
+  width: 100%;
+}
+.close {
+  position: absolute;
+  top: 50px;
+  left: 35px;
+  cursor: pointer;
+  box-shadow: 0px 0px 8px var(--backbtnshadow);
+  border: none;
+  padding: 4px 23px;
+  background-color: var(--inputBgColor--);
+  color: var(--inputTextColor--);
+
+  border-radius: 4px;
+}
+
+/* ..............Media fire........... */
+@media screen and (max-width: 1350px) {
+  .grid {
+    grid-template-columns: auto auto auto;
+    justify-content: space-around;
+  }
+}
+@media screen and (max-width: 1180px) {
+  .grid {
+    grid-template-columns: auto auto;
+  }
+}
+@media screen and (max-width: 700px) {
+  .grid {
+    grid-template-columns: auto;
+  }
+  header {
+    padding: 20px 10px;
+  }
+  .more-info {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .search {
+    margin: 40px 10px;
+  }
+}
